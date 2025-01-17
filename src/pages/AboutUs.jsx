@@ -1,11 +1,15 @@
-import aboutUs from '../assets/AboutUs/aboutUs.jpg'
+// import aboutUs from '../assets/AboutUs/aboutUs.jpg'
+import aboutUs from '../assets/BannerImages/search_hero_bg.jpg'
 
 const AboutUs = () => {
     return (
         <div className='mb-10' >
-            <div className='mb-10'>
-                <img src={aboutUs} alt="aboutUs-Img" className=" w-full h-[55vh] object-cover" />
-            </div>
+            <div className="relative mb-10">
+        <img src={aboutUs} alt="aboutUs-Img" className=" w-full h-[60vh] object-cover" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <p className="font-72-500 text-white">About Us</p>
+        </div>
+      </div>
             <div className='page-container'>
                 <p className='font-18-400 mb-6'>In a world where businesses are constantly seeking ways to stand out from the crowd, effective marketing is no longer a luxury but a necessity. At The Insignia Consultant, we understand the power of marketing to transform businesses and propel them to new heights. We are a team of passionate marketing experts dedicated to helping businesses achieve their goals through innovative and strategic marketing solutions.</p>
 

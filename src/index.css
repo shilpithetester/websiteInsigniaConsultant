@@ -20,10 +20,13 @@
 }
 
 .font-40-700{
-  @apply font-montserrat text-4xl md:text-[40px] font-bold 
+  @apply font-montserrat text-4xl lg:text-[40px] font-bold 
+}
+.font-36-700{
+  @apply font-montserrat text-[28px] md:text-[32px] lg:text-[36px] font-bold 
 }
 .font-32-700{
-  @apply font-montserrat text-[28px] md:text-[32px] font-bold 
+  @apply font-montserrat text-[28px] lg:text-[32px] font-bold 
 }
 .font-24-700{
   @apply font-montserrat text-xl md:text-2xl font-bold 
@@ -39,6 +42,9 @@
 }
 .font-20-500{
   @apply font-montserrat text-lg md:text-xl font-medium
+}
+.font-20-400{
+  @apply font-montserrat text-lg md:text-xl font-normal
 }
 .font-18-700{
   @apply font-montserrat text-base md:text-lg font-bold 

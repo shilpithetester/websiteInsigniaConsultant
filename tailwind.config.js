@@ -15,6 +15,13 @@ export default {
         'custom-sm': '365px',
         'custom-400px': '430px',
       },
+      colors: {
+        customSafron: '#D44A1C', 
+        customGrey: '#F1F1F1', 
+        customBlue: '#2a3292', 
+        customPurple:'#9b0175',
+        customlightGreen:'#46f4ce'
+      },
     },
   },
   plugins: [],

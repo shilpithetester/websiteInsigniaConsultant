@@ -1,4 +1,5 @@
-import MarketingImg from '../assets/BannerImages/market-strategy.jpg'
+// import MarketingImg from '../assets/BannerImages/market-strategy.jpg'
+import MarketingImg from '../assets/BannerImages/search_hero_bg.jpg'
 
 const MarketingStrategies = () => {
 
@@ -16,10 +17,13 @@ const MarketingStrategies = () => {
 
   return (
     <div>
-      <div >
-        <img src={MarketingImg} alt="MarketingImg" className=" w-full h-[55vh] object-cover" />
+      <div className="relative">
+        <img src={MarketingImg} alt="MarketingImg" className=" w-full h-[60vh] object-cover" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <p className="font-72-500 text-white">Marketing Strategies</p>
+        </div>
       </div>
-      <div className="flex gap-5 justify-center px-2  py-10 bg-[#FFE765] ">
+      <div className="flex gap-5 justify-center px-2  py-10 bg-customlightGreen ">
         <h3 className='font-24-700 '>The Key to Unlocking Your Market Potential. </h3>
       </div>
       <div className='page-container '>
@@ -36,8 +40,8 @@ const MarketingStrategies = () => {
           </ul>
         </div>
       </div>
-      <div className='bg-[#E8E8E8] px-2 py-10'>
-        <div className='bg-[#E8E8E8] page-container'>
+      <div className='bg-customGrey px-2 py-10'>
+        <div className=' page-container'>
           <div>
 
             <p className='font-18-400 mb-3'><b>Marketing strategies </b> are the plans and actions that businesses take to promote and sell their products or services. They should be based on a deep understanding of the target market, the competitive landscape, and the business's unique selling proposition. Effective marketing strategies will help businesses to:</p>

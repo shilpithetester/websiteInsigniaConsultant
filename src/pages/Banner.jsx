@@ -81,19 +81,14 @@ const Banner = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="absolute top-1/3 left-[22%]">
-          <p
-            className="font-72-500 text-white max-w-[400px] "
-            style={{ lineHeight: "1.5" }}
-          >
-            Your Gateway to Sucess
-          </p>
+       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <p className="font-72-500 text-white"> Your Gateway to Sucess</p>
         </div>
       </div>
 
-      <div className="py-14 bg-[#FFE765]">
+      <div className="py-10 bg-customlightGreen">
         <h4 className="text-center font-24-700 mb-5">The Insignia Consultant</h4>
-        <p className="font-16-500 page-container   text-black">
+        <p className="font-18-500 page-container   text-black">
           In a world where businesses are constantly seeking ways to stand out
           from the crowd, effective marketing is no longer a luxury but a
           necessity. At The Insignia Consultant, we understand the power of
@@ -111,16 +106,16 @@ const Banner = () => {
         </p>
       </div>
 
-      <div className="  page-container  my-5 m-auto flex flex-wrap justify-center sm:justify-between  ">
+      <div className="  page-container  my-5 flex flex-wrap justify-center md:justify-between  ">
         <Clients  />
       </div>
 
       <div className="mt-5 py-5 page-container">
-        <h2 className="text-center font-40-700">Why TIC</h2>
+        <h2 className="text-center font-40-700 ">Why TIC</h2>
         <ul className="list-disc marker:text-[#262254] mt-5 pl-5">
           {List?.map((item, index) => {
             return (
-              <li key={index} className="font-18-400 mt-3">
+              <li key={index} className="font-20-400 mt-3">
                 {item?.list}
               </li>
             );
