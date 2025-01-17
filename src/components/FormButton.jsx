@@ -1,10 +1,15 @@
+import { BiLoaderAlt } from "react-icons/bi"
 
 
-const FormButton = ({ lable }) => {
+const FormButton = ({ lable, loading = false }) => {
     return (
         <div>
-            <button type="submit" className="bg-customPurple text-white px-10 py-3 rounded-3xl hover:bg-customBlue ">
+            <button disabled={loading} type="submit" className="bg-customSafron flex gap-2 items-center text-white px-10 py-3 rounded-3xl hover:bg-customBlue ">
                 {lable}
+                {loading === true
+                    &&
+                    <BiLoaderAlt className="animate-spin" />
+                }
             </button>
         </div>
     )

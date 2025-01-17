@@ -1,4 +1,5 @@
 // import branding from '../assets/BannerImages/branding.jpg'
+import brand from '../assets/BannerImages/Brand.jpeg'
 import branding from '../assets/BannerImages/search_hero_bg.jpg'
 import logoVision from '../assets/logos/image 23.svg'
 import portfolioBrand from '../assets/logos/image 24.svg'
@@ -40,18 +41,44 @@ const Branding = () => {
         <div >
             <div className="relative">
                 <img src={branding} alt="branding" className=" w-full h-[60vh] object-cover" />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <p className="font-72-500 text-white">Branding</p>
+                <div className="absolute top-1/3 left-[22%] ">
+                    <div className="max-w-[650px]">
+                        <h2 className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-44 after:h-[4px] after:bg-customSafron after:mt-2 ">Branding</h2>
+                        {/* <h3 className="font-25-800 text-white mt-5 ">The key unlocking your market potential.</h3>
+                        <p className="font-22-500 text-white mt-5 ">TIC research the market, analyze the competitors and innovate.</p> */}
+                    </div>
                 </div>
+                {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <p className="font-72-500 text-white">Branding</p>
+                </div> */}
             </div>
-            <div className="flex  gap-5 justify-center mb-10 px-2 py-10 bg-customlightGreen ">
+            {/* <div className="flex  gap-5 justify-center mb-10 px-2 py-10 bg-customlightGreen ">
                 <h3 className='font-24-700 '>We help brands grow</h3>
+            </div> */}
+            <div className='page-container'>
+                <h2 className="max-w-full w-max m-auto mt-10 font-40-900 after:content-[''] after:block after:w-24 after:h-[4px] after:bg-customSafron after:mt-2 ">We help brands grow</h2>
             </div>
 
-            <div className='page-container py-5'>
+            {/* <div className='page-container py-5'>
                 <p className='font-18-400 my-6'>Your brand is your most valuable asset. It's what sets you apart from the competition and builds trust with your customers. But with so many brands out there, it can be hard to stand out. That's where we come in.</p>
                 <p className='font-18-400 '>We're a marketing consultancy that helps brands grow. We do this by developing and implementing comprehensive marketing strategies that align with your business goals. We also help you create a strong brand identity that resonates with your target audience.</p>
                 <p className='font-18-400 my-6'>We're passionate about helping brands succeed. We believe that every brand has a unique story to tell, and we're here to help you tell it in the most effective way possible.</p>
+            </div> */}
+
+            <div className=' py-10 '>
+                <div className='flex flex-wrap items-center  page-container'>
+                    <div className='w-full lg:w-1/2'>
+                        <p className='font-18-400 my-6'>Your brand is your most valuable asset. It's what sets you apart from the competition and builds trust with your customers. But with so many brands out there, it can be hard to stand out. That's where we come in.</p>
+                        <p className='font-18-400 '>We're a marketing consultancy that helps brands grow. We do this by developing and implementing comprehensive marketing strategies that align with your business goals. We also help you create a strong brand identity that resonates with your target audience.</p>
+                        <p className='font-18-400 my-6'>We're passionate about helping brands succeed. We believe that every brand has a unique story to tell, and we're here to help you tell it in the most effective way possible.</p>
+                    </div>
+                    <div className='w-full lg:w-1/2 '>
+                        <div className='xl:w-3/4 ms-auto'>
+                            <img src={brand} alt="brand" className='m-auto mb-2 rounded-lg' />
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
             <div className=' bg-customGrey py-10 '>
@@ -67,7 +94,7 @@ const Branding = () => {
                         <h3 className='font-24-700 mt-6'>How can we help you to create logo design</h3>
 
                         <div className='mb-10'>
-                            <ul className='list-disc marker:text-[#262254]'>
+                            <ul className='list-disc marker:text-customSafron'>
                                 {
                                     Logolist?.map((item, index) => {
                                         return (
@@ -86,7 +113,7 @@ const Branding = () => {
                         <p className='font-24-700 mb-5 mt-10'>How can we help you for create Brand portfolios:</p>
 
                         <div className='mb-10'>
-                            <ul className='list-disc marker:text-[#262254]'>
+                            <ul className='list-disc marker:text-customSafron'>
                                 <li className='font-18-400 my-3'>Reach a wider range of consumers</li>
                                 <li className='font-18-400 my-3'>Increase brand awareness and loyalty</li>
                                 <li className='font-18-400 my-3'>Generate more revenue</li>
@@ -116,7 +143,7 @@ const Branding = () => {
                         <p className='font-24-700 mb-5 mt-10'>How can we help you for brand strategy:</p>
 
                         <div className='mb-10'>
-                            <ul className='list-disc marker:text-[#262254]'>
+                            <ul className='list-disc marker:text-customSafron'>
                                 {
                                     stratergy?.map((item, index) => {
                                         return (
@@ -137,7 +164,7 @@ const Branding = () => {
                         <p className='font-24-700 mb-5 mt-10'>How can we help in a brand guideline:</p>
 
                         <div className='mb-10'>
-                            <ul className='list-disc marker:text-[#262254]'>
+                            <ul className='list-disc marker:text-customSafron'>
                                 {
                                     guideline?.map((item, index) => {
                                         return (
@@ -176,7 +203,7 @@ const Branding = () => {
             <div className='page-container'>
                 <div className='my-10'>
                     <p className='font-24-700 mb-5'>How can we help you for Branding</p>
-                    <ul className='list-disc  marker:text-[#262254]'>
+                    <ul className='list-disc  marker:text-customSafron'>
                         {
                             brandingList?.map((item, index) => {
                                 return (

@@ -4,6 +4,7 @@ import MarketingAutomation from '../assets/logos/image 22.svg'
 // import businessAutomation from '../assets/BannerImages/business-automation.jpg'
 // import MarketingAutomation from '../assets/business-automation/marketing-automation.png'
 import BannerImg from '../assets/BannerImages/search_hero_bg.jpg'
+import Automation from '../assets/BannerImages/automation.jpeg'
 
 const BusinessAutomation = () => {
 
@@ -29,12 +30,37 @@ const BusinessAutomation = () => {
         <div>
             <div className="relative">
                 <img src={BannerImg} alt="businessAutomation" className=" w-full h-[60vh] object-cover" />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <p className="font-72-500 text-white">Business Automation</p>
+                <div className="absolute top-1/3 left-[22%] ">
+                    <div className="max-w-[650px]">
+                        <h2 className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-44 after:h-[4px] after:bg-customSafron after:mt-2 ">Business Automation</h2>
+                        {/* <h3 className="font-25-800 text-white mt-5 ">The key unlocking your market potential.</h3>
+                        <p className="font-22-500 text-white mt-5 ">TIC research the market, analyze the competitors and innovate.</p> */}
+                    </div>
                 </div>
+                {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <p className="font-72-500 text-white">Business Automation</p>
+                </div> */}
             </div>
-            <div className="flex gap-5 justify-center px-2 py-10 bg-customlightGreen ">
-                <h3 className='font-24-700 '>Automation: The key to unlocking your business potential</h3>
+            {/* <div className="flex gap-5 justify-center px-2 py-10 bg-customlightGreen ">
+            </div> */}
+            <div className='page-container'>
+                <h2 className="max-w-full w-max m-auto font-40-900 mt-10 after:content-[''] after:block after:w-40 after:h-[4px] after:bg-customSafron after:mt-2 ">Automation: The key to unlocking your business potential</h2>
+            </div>
+
+            {/* <h3 className='font-24-700 w-max m-auto mt-10'>Automation: The key to unlocking your business potential</h3> */}
+
+            <div className=' bg-customGrey py-10 '>
+                <div className='flex flex-wrap items-center page-container'>
+                    <div className='w-full xl:w-1/2'>
+                        <p className='font-18-400 '>Marketing automation is the use of software to automate marketing tasks and execute predetermined campaigns across several different channels at scheduled intervals. It allows businesses to streamline their marketing operations, improve efficiency, and reach their target audience more effectively.</p>
+
+                    </div>
+                    <div className='w-full xl:w-1/2 max-xl:m-auto '>
+                        <div className='xl:w-3/4 ms-auto'>
+                            <img src={Automation} alt="Automation" className='m-auto mb-2 rounded-lg' />
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className=' py-10 '>
@@ -42,15 +68,15 @@ const BusinessAutomation = () => {
                     <div className='w-full xl:w-1/2 max-xl:m-auto'>
                         <div className='xl:w-3/4'>
                             <img src={MarketingAutomation} alt="MarketingAutomation" className='m-auto mb-2 rounded-lg' />
-                            <h3 className='font-36-700 text-center '>Automate your marketing, and watch your business grow.</h3>
+                            <h3 className='font-36-700 text-center '> Business Automation</h3>
                         </div>
                     </div>
                     <div className='w-full xl:w-1/2 max-xl:mt-5'>
-                        <p className='font-18-400 '>Marketing automation is the use of software to automate marketing tasks and execute predetermined campaigns across several different channels at scheduled intervals. It allows businesses to streamline their marketing operations, improve efficiency, and reach their target audience more effectively.</p>
+                        {/* <p className='font-18-400 '>Marketing automation is the use of software to automate marketing tasks and execute predetermined campaigns across several different channels at scheduled intervals. It allows businesses to streamline their marketing operations, improve efficiency, and reach their target audience more effectively.</p> */}
 
                         <h2 className='font-24-700 my-8'>The benefits of Marketing Automation:</h2>
 
-                        <ul className='list-disc  marker:text-[#262254]'>
+                        <ul className='list-disc  marker:text-customSafron'>
                             {
                                 automation?.map((item, index) => {
                                     return (
@@ -66,7 +92,7 @@ const BusinessAutomation = () => {
                 <div className='flex flex-wrap items-center page-container'>
                     <div className='w-full xl:w-1/2'>
                         <p className='font-24-700 mt-10'>How can we help you for Process Automation</p>
-                        <ul className='list-disc  marker:text-[#262254]  mt-5 mb-10'>
+                        <ul className='list-disc  marker:text-customSafron  mt-5 mb-10'>
                             {
                                 Processautomation?.map((item, index) => {
                                     return (
@@ -79,7 +105,7 @@ const BusinessAutomation = () => {
                     <div className='w-full xl:w-1/2 max-xl:m-auto '>
                         <div className='xl:w-3/4 ms-auto'>
                             <img src={businessAutomation} alt="businessAutomation" className='m-auto mb-2 rounded-lg' />
-                            <h3 className='font-36-700 text-center '>Automate your processes and free up your time</h3>
+                            <h3 className='font-36-700 text-center '>Automation process</h3>
                         </div>
                     </div>
                 </div>
@@ -89,7 +115,7 @@ const BusinessAutomation = () => {
 
                 <div className='my-10'>
                     <p className='font-24-700 mb-5'>Why you should choose us for business automation</p>
-                    <ul className='list-disc  marker:text-[#262254]'>
+                    <ul className='list-disc  marker:text-customSafron'>
                         {
                             business?.map((item, index) => {
                                 return (

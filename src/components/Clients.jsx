@@ -1,4 +1,5 @@
 import gooleMarketing from "../assets/logos/image 8.svg";
+// import gooleMarketing from "../assets/logos/google.png";
 import Strategies from "../assets/logos/image 9.svg";
 import business from "../assets/logos/image 10.svg";
 import branding from "../assets/logos/image 11.svg";
@@ -20,9 +21,9 @@ const Clients = () => {
     <>
       {marketing?.map((item, index) => {
         return (
-          <div key={index} className="p-5 flex flex-col items-center rounded-lg  text-black hover:bg-customPurple hover:text-white group text-center md:w-[47%] lg:w-[40%]">
-            <img src={item?.logo} alt="images" className="hover:text-white"  />
-            <p className="text-center  block mt-4 font-20-700 max-w-80 m-auto mb-5">{item?.text}</p>
+          <div key={index} className="px-5 py-8 flex flex-wrap flex-col items-center rounded-lg  text-black hover:bg-customSafron hover:text-white group text-center w-full md:w-[47%] xl:w-[25%]">
+            <img src={item?.logo} alt="images" className="group-hover:invert w-16 h-16" />
+            <h2 className="text-center  block mt-4 font-24-900 max-w-80 m-auto mb-5">{item?.text}</h2>
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <Button lable='Read More' link={item?.to}  className='border border-white'/>
             </div>

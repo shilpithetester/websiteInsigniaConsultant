@@ -25,8 +25,9 @@ const Layout = () => {
   }, [location]);
   return (
     <div  >
-      <div className={`header fixed w-full top-0 z-50 transition-colors duration-300 ${isScrolled ? "bg-white text-black" : "bg-transparent"
-        }`}>
+      <div className={`header fixed w-full top-0 z-50 transition-colors duration-300 
+      ${isScrolled ? "bg-customDarkblue" : "bg-transparent"}
+        `}>
         <Header />
       </div>
       <div>

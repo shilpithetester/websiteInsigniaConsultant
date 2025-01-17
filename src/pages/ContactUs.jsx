@@ -60,33 +60,43 @@ import { useForm } from 'react-hook-form';
 import contactUs from '../assets/contactUs/contactus.jpg';
 import backgroundImg from '../assets/BannerImages/search_hero_bg.jpg';
 import FormButton from '../components/FormButton';
+import { useState } from 'react';
 
 const ContactUs = () => {
-    const { register, handleSubmit, formState: { errors } ,reset} = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { register: registerConsultancy, handleSubmit: handleSubmitConsultancy, formState: { errors: errorsConsultancy } } = useForm();
+    const[loading,setLoading]=useState(false)
+    
 
-    // const onContactSubmit = (data) => {
-    //     console.log('Form Data:', data);
-    // };
-
-    const onContactSubmit = async (data,e) => {
+    const onContactSubmit = async (data, e) => {
+        console.log(data, "data");
+        setLoading(true)
         e.preventDefault();
+        const formData = new FormData();
+        Object.entries(data).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+
         try {
-          const response = await fetch("https://script.google.com/macros/s/AKfycbwAvBi2j6F0XeI3QsHvf60lsWxhv7ksSYBrIOeWzgERvBynwEow4wsv5dmixCWBiYpK/exec", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-          });
-          if (response.ok) {
-            alert("Form submitted successfully!");
-            reset()
-          } else {
-            alert("Error submitting the form");
-          }
+            const response = await fetch(
+                "https://script.google.com/macros/s/AKfycbzqOG_L1gwb61z7SbXlwwOTRZgepd5yS1OsFvniB0lo-RP2ItdPZTP89ZqKB635kjC7iw/exec",
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
+            if (response) {
+                reset()
+                setLoading(false)
+            }
+          
+            console.log(response?.body, 'response');
+
+            
         } catch (error) {
-          console.error("Error:", error);
+            console.error("Fetch error:", error);
         }
-      };
+    };
 
 
 
@@ -119,7 +129,7 @@ const ContactUs = () => {
                                     {...register('fullName', { required: 'Full Name is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errors.fullName && <span className="text-black">{errors.fullName.message}</span>}
+                                {errors.fullName && <span className="text-red-600">{errors.fullName.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -128,7 +138,7 @@ const ContactUs = () => {
                                     {...register('email', { required: 'Email is required', pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errors.email && <span className="text-black">{errors.email.message}</span>}
+                                {errors.email && <span className="text-red-600">{errors.email.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -137,7 +147,7 @@ const ContactUs = () => {
                                     {...register('title', { required: 'Title is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errors.title && <span className="text-black">{errors.title.message}</span>}
+                                {errors.title && <span className="text-red-600">{errors.title.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -146,7 +156,7 @@ const ContactUs = () => {
                                     {...register('company', { required: 'Company is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errors.company && <span className="text-black">{errors.company.message}</span>}
+                                {errors.company && <span className="text-red-600">{errors.company.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -155,7 +165,7 @@ const ContactUs = () => {
                                     {...register('contactNumber', { required: 'Contact Number is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errors.contactNumber && <span className="text-black">{errors.contactNumber.message}</span>}
+                                {errors.contactNumber && <span className="text-red-600">{errors.contactNumber.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -164,7 +174,7 @@ const ContactUs = () => {
                                     {...register('website', { required: 'Website is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errors.website && <span className="text-black">{errors.website.message}</span>}
+                                {errors.website && <span className="text-red-600">{errors.website.message}</span>}
                             </div>
                             <div className='w-full h-36'>
                                 <textarea
@@ -173,12 +183,12 @@ const ContactUs = () => {
                                     className="bg-white w-full p-3 rounded-3xl h-full resize-none"
                                 ></textarea>
                                 {errors.consultingServices && (
-                                    <span className="text-black">{errors.consultingServices.message}</span>
+                                    <span className="text-red-600">{errors.consultingServices.message}</span>
                                 )}
                             </div>
                         </div>
                         <div className='mt-8 w-max m-auto'>
-                            <FormButton lable='Contact Us' />
+                            <FormButton lable='Contact Us'loading={loading} />
                         </div>
                     </form>
                 </div>
@@ -214,7 +224,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('fullName', { required: 'Full Name is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.fullName && <span className="text-black">{errorsConsultancy.fullName.message}</span>}
+                                {errorsConsultancy.fullName && <span className="text-red-600">{errorsConsultancy.fullName.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -223,7 +233,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('email', { required: 'Email is required', pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.email && <span className="text-black">{errorsConsultancy.email.message}</span>}
+                                {errorsConsultancy.email && <span className="text-red-600">{errorsConsultancy.email.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -232,7 +242,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('title', { required: 'Title is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.title && <span className="text-black">{errorsConsultancy.title.message}</span>}
+                                {errorsConsultancy.title && <span className="text-red-600">{errorsConsultancy.title.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -241,7 +251,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('company', { required: 'Company is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.company && <span className="text-black">{errorsConsultancy.company.message}</span>}
+                                {errorsConsultancy.company && <span className="text-red-600">{errorsConsultancy.company.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -250,7 +260,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('contactNumber', { required: 'Contact Number is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.contactNumber && <span className="text-black">{errorsConsultancy.contactNumber.message}</span>}
+                                {errorsConsultancy.contactNumber && <span className="text-red-600">{errorsConsultancy.contactNumber.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -259,7 +269,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('website', { required: 'Website is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.website && <span className="text-black">{errorsConsultancy.website.message}</span>}
+                                {errorsConsultancy.website && <span className="text-red-600">{errorsConsultancy.website.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -268,7 +278,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('insdustry', { required: 'Related Industry is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.insdustry && <span className="text-black">{errorsConsultancy.insdustry.message}</span>}
+                                {errorsConsultancy.insdustry && <span className="text-red-600">{errorsConsultancy.insdustry.message}</span>}
                             </div>
                             <div className='w-full md:w-[49%]'>
                                 <input
@@ -277,7 +287,7 @@ const ContactUs = () => {
                                     {...registerConsultancy('companySize', { required: 'company size is required' })}
                                     className='bg-white w-full p-3 rounded-full'
                                 />
-                                {errorsConsultancy.companySize && <span className="text-black">{errorsConsultancy.companySize.message}</span>}
+                                {errorsConsultancy.companySize && <span className="text-red-600">{errorsConsultancy.companySize.message}</span>}
                             </div>
                             <div className='w-full h-36'>
                                 <textarea
@@ -286,7 +296,7 @@ const ContactUs = () => {
                                     className="bg-white w-full p-3 rounded-3xl h-full resize-none"
                                 ></textarea>
                                 {errorsConsultancy.about && (
-                                    <span className="text-black">{errorsConsultancy.about.message}</span>
+                                    <span className="text-red-600">{errorsConsultancy.about.message}</span>
                                 )}
                             </div>
                         </div>

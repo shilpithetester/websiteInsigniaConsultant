@@ -12,13 +12,12 @@
   @apply font-Staatliches text-5xl sm:text-6xl lg:text-7xl font-medium 
 }
 
-.font-20-700-lora{
-  @apply font-lora text-lg md:text-xl font-bold 
+.font-65-900{
+  @apply font-montserrat text-[42px] lg:text-[65px] font-black
 }
-.font-18-500-lora{
-  @apply font-lora text-base md:text-lg font-medium 
+.font-40-900{
+  @apply font-montserrat text-4xl lg:text-[40px] font-black 
 }
-
 .font-40-700{
   @apply font-montserrat text-4xl lg:text-[40px] font-bold 
 }
@@ -28,6 +27,12 @@
 .font-32-700{
   @apply font-montserrat text-[28px] lg:text-[32px] font-bold 
 }
+.font-25-800{
+  @apply font-montserrat text-[22px] md:text-[25px] font-extrabold 
+}
+.font-24-900{
+  @apply font-montserrat text-xl md:text-2xl font-black 
+}
 .font-24-700{
   @apply font-montserrat text-xl md:text-2xl font-bold 
 }
@@ -36,6 +41,12 @@
 }
 .font-24-400{
   @apply font-montserrat text-xl md:text-2xl font-normal 
+}
+.font-22-700{
+  @apply font-montserrat text-xl md:text-[22px] font-bold 
+}
+.font-22-500{
+  @apply font-montserrat text-xl md:text-[22px] font-medium 
 }
 .font-20-700{
   @apply font-montserrat text-lg md:text-xl font-bold 

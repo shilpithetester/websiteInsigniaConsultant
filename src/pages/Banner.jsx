@@ -80,15 +80,18 @@ const Banner = () => {
         >
           Your browser does not support the video tag.
         </video>
-
-       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <p className="font-72-500 text-white"> Your Gateway to Sucess</p>
+        <div className="absolute inset-0 bg-customDarkblue bg-opacity-50"></div>
+        <div className="absolute top-1/3 left-[22%] ">
+          <div className="max-w-[650px]">
+            <p className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-1/4 after:h-[4px] after:bg-customSafron after:mt-2 "> Your Gateway to Sucess</p>
+            <p className="font-22-500 text-white mt-5 ">We have the power of marketing to transform businesses and propel them to new heights</p>
+          </div>
         </div>
       </div>
-
-      <div className="py-10 bg-customlightGreen">
-        <h4 className="text-center font-24-700 mb-5">The Insignia Consultant</h4>
-        <p className="font-18-500 page-container   text-black">
+      {/* 
+      <div className="py-10 bg-customPurple">
+        <h4 className="text-center font-40-700 mb-5 text-white">The Insignia Consultant</h4>
+        <p className="font-18-500 page-container text-center   text-white">
           In a world where businesses are constantly seeking ways to stand out
           from the crowd, effective marketing is no longer a luxury but a
           necessity. At The Insignia Consultant, we understand the power of
@@ -97,22 +100,24 @@ const Banner = () => {
           businesses achieve their goals through innovative and strategic
           marketing solutions.
         </p>
-      </div>
+      </div> */}
 
-      <div className="mt-5 py-5">
-        <h2 className="text-center font-40-700">How we help our clients</h2>
-        <p className="text-center font-24-400 py-1">
+      <div className="mt-5 py-5  page-container">
+        <h2 className=" max-w-full w-max m-auto font-40-900 after:content-[''] after:block after:w-24 after:h-[4px] after:bg-customSafron after:mt-2 ">How TIC help our clients</h2>
+        <p className="text-center font-24-600 py-1">
           "Your success is our passion."
         </p>
       </div>
 
       <div className="  page-container  my-5 flex flex-wrap justify-center md:justify-between  ">
-        <Clients  />
+        <Clients />
       </div>
 
       <div className="mt-5 py-5 page-container">
-        <h2 className="text-center font-40-700 ">Why TIC</h2>
-        <ul className="list-disc marker:text-[#262254] mt-5 pl-5">
+        <h2 className=" max-w-full w-max m-auto font-40-900 after:content-[''] after:block after:w-24 after:h-[4px] after:bg-customSafron after:mt-2 ">Why TIC</h2>
+
+        {/* <h2 className="text-center font-40-700 ">Why TIC</h2> */}
+        <ul className="list-disc marker:text-customSafron mt-5 pl-5">
           {List?.map((item, index) => {
             return (
               <li key={index} className="font-20-400 mt-3">

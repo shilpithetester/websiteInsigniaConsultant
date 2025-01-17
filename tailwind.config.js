@@ -13,14 +13,17 @@ export default {
       },
       screens: {
         'custom-sm': '365px',
-        'custom-400px': '430px',
+        'custom-480px': '480px',
+        'custom-1450px': '1450px',
       },
       colors: {
         customSafron: '#D44A1C', 
         customGrey: '#F1F1F1', 
         customBlue: '#2a3292', 
         customPurple:'#9b0175',
-        customlightGreen:'#46f4ce'
+        customlightGreen:'#46f4ce',
+        customDarkblue:'#181d57',
+        customoramge:'#f68712',
       },
     },
   },
