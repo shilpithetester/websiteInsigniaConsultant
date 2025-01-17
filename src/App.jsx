@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Banner from './pages/Banner';
-import GooglMarketing from './pages/Googlmarketing';
+import GooglMarketing from './pages/GooglMarketing';
 import Layout from './components/Layout';
 import MarketingStrategies from './pages/MarketingStrategies';
 import BusinessAutomation from './pages/BusinessAutomation';
