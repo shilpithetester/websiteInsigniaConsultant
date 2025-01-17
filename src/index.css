@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.font-72-500{
+  @apply font-Staatliches text-5xl sm:text-6xl lg:text-7xl font-medium 
+}
+
+.font-20-700-lora{
+  @apply font-lora text-lg md:text-xl font-bold 
+}
+.font-18-500-lora{
+  @apply font-lora text-base md:text-lg font-medium 
+}
+
+.font-40-700{
+  @apply font-montserrat text-4xl md:text-[40px] font-bold 
+}
+.font-32-700{
+  @apply font-montserrat text-[28px] md:text-[32px] font-bold 
+}
+.font-24-700{
+  @apply font-montserrat text-xl md:text-2xl font-bold 
+}
+.font-24-600{
+  @apply font-montserrat text-xl md:text-2xl font-semibold 
+}
+.font-24-400{
+  @apply font-montserrat text-xl md:text-2xl font-normal 
+}
+.font-20-700{
+  @apply font-montserrat text-lg md:text-xl font-bold 
+}
+.font-20-500{
+  @apply font-montserrat text-lg md:text-xl font-medium
+}
+.font-18-700{
+  @apply font-montserrat text-base md:text-lg font-bold 
+}
+.font-18-500{
+  @apply font-montserrat text-base md:text-lg font-medium
+}
+.font-18-400{
+  @apply font-montserrat text-base md:text-lg font-normal
+}
+
+.font-16-400{
+  @apply font-montserrat text-sm md:text-base font-normal  
+}
+.font-16-500{
+  @apply font-montserrat text-sm md:text-base font-medium 
+}
+.font-16-900{
+  @apply font-montserrat text-sm md:text-base font-black 
+}
+.font-16-700{
+  @apply font-montserrat text-sm md:text-base font-bold 
+}
+.font-12-400{
+  @apply font-montserrat text-xs font-normal 
+}
+
+.page-container{
+  @apply w-4/5 md:w-3/5 m-auto
+}
+.google-container{
+  @apply w-4/5 md:w-4/5 m-auto
+}
