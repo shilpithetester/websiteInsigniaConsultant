@@ -58,16 +58,16 @@
 
 import { useForm } from 'react-hook-form';
 import contactUs from '../assets/BannerImages/search_hero_bg.jpg'
-import backgroundImg from '../assets/BannerImages/search_hero_bg.jpg';
+// import backgroundImg from '../assets/BannerImages/search_hero_bg.jpg';
 import formBgImg from '../assets/AboutUs/Form-bg.jpg';
 import FormButton from '../components/FormButton';
 import { useState } from 'react';
 
 const ContactUs = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const { register: registerConsultancy, handleSubmit: handleSubmitConsultancy, formState: { errors: errorsConsultancy },reset:resetConsultancy } = useForm();
+    // const { register: registerConsultancy, handleSubmit: handleSubmitConsultancy, formState: { errors: errorsConsultancy },reset:resetConsultancy } = useForm();
     const[loading,setLoading]=useState(false)
-    const[consultancyLoading,setConsultancyLoading]=useState(false)
+    // const[consultancyLoading,setConsultancyLoading]=useState(false)
     
 
     const onContactSubmit = async (data, e) => {
@@ -101,35 +101,35 @@ const ContactUs = () => {
 
 
 
-    const onConsultancySubmit =async (data,e) => {
-        console.log('Form Data:', data);
-        setConsultancyLoading(true)
-        e.preventDefault();
-        const formData = new FormData();
-        Object.entries(data).forEach(([key, value]) => {
-          formData.append(key, value);
-        });
+    // const onConsultancySubmit =async (data,e) => {
+    //     console.log('Form Data:', data);
+    //     setConsultancyLoading(true)
+    //     e.preventDefault();
+    //     const formData = new FormData();
+    //     Object.entries(data).forEach(([key, value]) => {
+    //       formData.append(key, value);
+    //     });
 
-        try {
-            const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbwMJul-Z3NlAZNrjWPQINcIBqBxyDWXRNN0hVasFKvNFNkfTdn2dTOxDQTUTfYeXZyH2w/exec",
-                {
-                    method: "POST",
-                    body: formData,
-                }
-            );
-            if (response) {
-                resetConsultancy()
-                setConsultancyLoading(false)
-            }
+    //     try {
+    //         const response = await fetch(
+    //             "https://script.google.com/macros/s/AKfycbwMJul-Z3NlAZNrjWPQINcIBqBxyDWXRNN0hVasFKvNFNkfTdn2dTOxDQTUTfYeXZyH2w/exec",
+    //             {
+    //                 method: "POST",
+    //                 body: formData,
+    //             }
+    //         );
+    //         if (response) {
+    //             resetConsultancy()
+    //             setConsultancyLoading(false)
+    //         }
           
-            console.log(response?.body, 'response');
+    //         console.log(response?.body, 'response');
 
             
-        } catch (error) {
-            console.error("Fetch error:", error);
-        }
-    };
+    //     } catch (error) {
+    //         console.error("Fetch error:", error);
+    //     }
+    // };
 
     return (
         <div>
@@ -151,7 +151,7 @@ const ContactUs = () => {
                 style={{ backgroundImage: `url(${formBgImg})` }}
             >
                 <div className='page-container'>
-                    <h3 className='font-24-700 text-center my-5 text-white'>TIC Contact us</h3>
+                    <h3 className='font-38-900 text-center my-5 text-white'>TIC Contact us</h3>
                     <p className='font-18-500 text-center mb-5 text-white'>
                         Thank you for hiring The Insignia Consultancy. We will work closely with you to
                         understand your unique needs and goals, and develop customized solutions to help
@@ -243,7 +243,7 @@ const ContactUs = () => {
                 </iframe>
             </div>
 
-            <div
+            {/* <div
                 className="bg-cover bg-center bg-no-repeat p-8"
                 style={{ backgroundImage: `url(${backgroundImg})` }}
             >
@@ -342,7 +342,7 @@ const ContactUs = () => {
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

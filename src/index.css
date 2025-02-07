@@ -21,11 +21,17 @@
 .font-40-700{
   @apply font-montserrat text-4xl lg:text-[40px] font-bold 
 }
+.font-38-900{
+  @apply font-montserrat text-[32px] md:text-[38px] lg:text-[36px] font-black
+}
 .font-36-700{
   @apply font-montserrat text-[28px] md:text-[32px] lg:text-[36px] font-bold 
 }
 .font-32-700{
   @apply font-montserrat text-[28px] lg:text-[32px] font-bold 
+}
+.font-28-800{
+  @apply font-montserrat text-[25px] md:text-[28px] font-extrabold 
 }
 .font-25-800{
   @apply font-montserrat text-[22px] md:text-[25px] font-extrabold 

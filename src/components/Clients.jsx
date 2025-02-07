@@ -1,31 +1,32 @@
 // import gooleMarketing from "../assets/logos/image 8.svg";
-// import gooleMarketing from "../assets/logos/google.png";
-import Strategies from "../assets/logos/image 9.svg";
-import business from "../assets/logos/image 10.svg";
-import branding from "../assets/logos/image 11.svg";
+// import Strategies from "../assets/logos/image 9.svg";
+// import business from "../assets/logos/image 10.svg";
 // import gooleMarketing from "../assets/logos/google-marketing.png";
 // import Strategies from "../assets/logos/marketing-strategies.png";
 // import business from "../assets/logos/business-automation.png";
 // import branding from "../assets/logos/branding.png";
 
+import gooleMarketing from "../assets/logos/google.png";
+import branding from "../assets/logos/image 11.svg";
 import socialMedia from '../assets/BannerImages/icons/service.webp' 
 import seo from '../assets/BannerImages/icons/seo.webp' 
 import ppc from '../assets/BannerImages/icons/ppc.webp' 
 import contentMarketing from '../assets/BannerImages/icons/contentmarketing.webp' 
 import digitalStratergy from '../assets/BannerImages/icons/digitalStratergy.webp' 
+import webdesign from '../assets/BannerImages/icons/webDesign.webp' 
 
 import Button from "./Button";
 
 const Clients = () => {
   const marketing = [
-    { logo: socialMedia, heading: "Social Media",text:"Maximize your social media presence with our expert strategies. We help you build strong relationships with your followers, increase brand loyalty, and achieve your marketing objectives.", to: '/google-marketing' },
-    { logo: seo, heading: "Seo",text:"Boost your online visibility with expert SEO services. We help businesses of all sizes increase organic traffic, improve search engine rankings, and achieve their digital marketing goals.", to: '/marketing-stratergies' },
-    { logo: ppc, heading: "Ppc", text:"Drive targeted traffic and conversions with our expert PPC management. We create high-performing campaigns on Google Ads and more to deliver measurable results.",to: '/business-automation' },
-    { logo: contentMarketing, heading: "Content Marketing",text:"Attract, engage, and convert your target audience with compelling content. Our expert team creates high-quality content that drives traffic, builds brand awareness, and generates leads.", to: '/branding' },
-    { logo: digitalStratergy, heading: "Digital strategy",text:"Develop and execute winning digital strategies that drive growth. We help businesses achieve their online marketing goals through data-driven insights and integrated campaigns.", to: '/branding' },
+    { logo: socialMedia, heading: "Social Media",text:"Maximize your social media presence with our expert strategies. We help you build strong relationships with your followers, increase brand loyalty, and achieve your marketing objectives.", to: '/social-media' },
+    { logo: seo, heading: "Seo",text:"Boost your online visibility with expert SEO services. We help businesses of all sizes increase organic traffic, improve search engine rankings, and achieve their digital marketing goals.", to: '/seo' },
+    { logo: ppc, heading: "Ppc", text:"Drive targeted traffic and conversions with our expert PPC management. We create high-performing campaigns on Google Ads and more to deliver measurable results.",to: '/ppc' },
+    { logo: contentMarketing, heading: "Content Marketing",text:"Attract, engage, and convert your target audience with compelling content. Our expert team creates high-quality content that drives traffic, builds brand awareness, and generates leads.", to: '/' },
+    { logo: digitalStratergy, heading: "Digital strategy",text:"Develop and execute winning digital strategies that drive growth. We help businesses achieve their online marketing goals through data-driven insights and integrated campaigns.", to: '/stratergy' },
     { logo: branding, heading: "Branding",text:"Unlock the power of your brand. Our expert branding services help you differentiate yourself from the competition, increase brand loyalty, and drive business growth.", to: '/branding' },
-    { logo: branding, heading: "Digital PR",text:"Get your brand noticed with our data-driven Digital PR strategies. We identify and leverage relevant media opportunities to build credibility, generate leads, and enhance your reputation online.", to: '/branding' },
-    { logo: branding, heading: "Web Design", to: '/branding' },
+    { logo: gooleMarketing, heading: "Digital PR",text:"Get your brand noticed with our data-driven Digital PR strategies. We identify and leverage relevant media opportunities to build credibility, generate leads, and enhance your reputation online.", to: '/' },
+    { logo: webdesign, heading: "Web Design", to: '/' },
   ];
 
   return (

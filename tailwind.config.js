@@ -14,7 +14,10 @@ export default {
       screens: {
         'custom-sm': '365px',
         'custom-480px': '480px',
+        'custom-650px': '650px',
+        'custom-850px': '850px',
         'custom-1450px': '1450px',
+        'custom-1600px': '1600px',
       },
       colors: {
         customSafron: '#D44A1C', 
