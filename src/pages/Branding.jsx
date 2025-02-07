@@ -40,12 +40,12 @@ const Branding = () => {
     return (
         <div >
             <div className="relative">
-                <img src={branding} alt="branding" className=" w-full h-[60vh] object-cover" />
-                <div className="absolute top-1/3 left-[22%] ">
+                <img src={branding} alt="branding" className=" w-full h-[65vh] object-cover" />
+                <div className="absolute top-1/3 left-[10%] md:left-[19%] ">
                     <div className="max-w-[650px]">
                         <h2 className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-44 after:h-[4px] after:bg-customSafron after:mt-2 ">Branding</h2>
-                        {/* <h3 className="font-25-800 text-white mt-5 ">The key unlocking your market potential.</h3>
-                        <p className="font-22-500 text-white mt-5 ">TIC research the market, analyze the competitors and innovate.</p> */}
+                        {/* <h3 className="font-25-800 text-white mt-5 ">The key unlocking your market potential.</h3> */}
+                        <p className="font-22-500 text-white mt-5 ">Branding is the process of making a product, organization, or person distinct from others by using a name, design, symbol, or set of qualities</p>
                     </div>
                 </div>
                 {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

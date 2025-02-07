@@ -21,8 +21,8 @@ const MarketingStrategies = () => {
   return (
     <div>
       <div className="relative">
-        <img src={MarketingImg} alt="MarketingImg" className=" w-full h-[60vh] object-cover" />
-        <div className="absolute top-1/3 left-[22%] ">
+        <img src={MarketingImg} alt="MarketingImg" className=" w-full h-[65vh] object-cover" />
+        <div className="absolute top-1/3 left-[10%] md:left-[19%] ">
           <div className="max-w-[650px]">
             <h2 className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-1/4 after:h-[4px] after:bg-customSafron after:mt-2 "> Marketing Strategies</h2>
             <h3 className="font-25-800 text-white mt-5 ">The key unlocking your market potential.</h3>
@@ -52,7 +52,7 @@ const MarketingStrategies = () => {
           <div className='w-full lg:w-1/2 '>
             <div className='xl:w-3/4 ms-auto'>
               <img src={marketingPotential} alt="marketingPotential" className='m-auto mb-2 rounded-lg' />
-              <h3 className='font-36-700 text-center '>Marketing Potential</h3>
+              {/* <h3 className='font-36-700 text-center '>Marketing Potential</h3> */}
             </div>
           </div>
         </div>

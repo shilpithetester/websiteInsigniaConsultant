@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="py-10 px-2 bg-customDarkblue ">
         <div className="page-container flex flex-wrap gap-5 justify-center md:justify-between">
           <div>
-            <Link to={'/'} className="flex gap-2 items-center w-max px-5 border-customSafron border-r-4">
+            <Link to={'/'} className="flex gap-2 items-center  px-5 border-customSafron border-r-4">
               <img src={logo} alt="TIC Logo" width={60} className='bg-white rounded-full' />
               <p className="font-20-700 text-white">THE INSIGNIA CONSULTANT</p>
             </Link>

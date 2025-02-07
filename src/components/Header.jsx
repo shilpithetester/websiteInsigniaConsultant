@@ -4,23 +4,23 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logos/brandLogo.png';
 import { Dropdown, Space, Typography } from 'antd';
 import { MdKeyboardArrowDown, MdMenu, MdClose } from "react-icons/md";
+import Button from './Button';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false); // State for menu toggle
   const navigate = useNavigate();
-  const location = useLocation(); 
+  const location = useLocation();
 
   const items = [
     {
       key: '1',
       label: (
-        <div
-          className={`font-18-500 ${
-            location.pathname === '/marketing-stratergies' ? 'text-customSafron' : 'text-black'
-          }`}
+        <Link
+          className={`font-18-500 ${location.pathname === '/marketing-stratergies' ? '!text-customSafron' : 'text-black'
+            }`}
         >
           Marketing Strategies
-        </div>
+        </Link>
       ),
       onClick: () => {
         navigate('/marketing-stratergies')
@@ -30,15 +30,14 @@ const Header = () => {
     {
       key: '2',
       label: (
-        <div
-          className={`font-18-500 ${
-            location.pathname === '/branding' ? 'text-customSafron' : 'text-black'
-          }`}
+        <Link
+          className={`font-18-500 ${location.pathname === '/branding' ? '!text-customSafron' : 'text-black'
+            }`}
         >
           Branding
-        </div>
+        </Link>
       ),
-      onClick: () =>{ 
+      onClick: () => {
         navigate('/branding')
         setMenuOpen(!menuOpen);
       },
@@ -46,13 +45,12 @@ const Header = () => {
     {
       key: '3',
       label: (
-        <div
-          className={`font-18-500 ${
-            location.pathname === '/business-automation' ? 'text-customSafron' : 'text-black'
-          }`}
+        <Link
+          className={`font-18-500 ${location.pathname === '/business-automation' ? '!text-customSafron' : 'text-black'
+            }`}
         >
           Business Automation
-        </div>
+        </Link>
       ),
       onClick: () => {
         navigate('/business-automation')
@@ -62,13 +60,12 @@ const Header = () => {
     {
       key: '4',
       label: (
-        <div
-          className={`font-18-500 ${
-            location.pathname === '/google-marketing' ? 'text-customSafron' : 'text-black'
-          }`}
+        <Link
+          className={`font-18-500 ${location.pathname === '/google-marketing' ? '!text-customSafron' : 'text-black'
+            }`}
         >
           Google Marketing
-        </div>
+        </Link>
       ),
       onClick: () => {
         navigate('/google-marketing')
@@ -86,30 +83,70 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <div className="flex flex-wrap items-center justify-center custom-480px:justify-between py-4 w-11/12 custom-1450px:w-3/5 m-auto">
-      {/* Logo Section */}
-      <Link to={'/'} className="flex gap-2 items-center w-max px-5 border-customSafron border-r-4">
-        <img src={logo} alt="TIC Logo" width={60} className='bg-white rounded-full'/>
-        <p className="font-20-700 text-white">THE INSIGNIA CONSULTANT</p>
-      </Link>
+    <div className='custom-1450px:w-[65%] m-auto py-1'>
+      <div className='flex justify-end items-center'>
+        <Link to='/about-us' onClick={handleMenuClick} className="block  lg:inline font-12-500 text-white hover:text-customSafron  max-lg:mb-2  lg:py-0">
+          About Us
+        </Link>
+        <span className='text-white px-2'>|</span>
+        <Link to='/contact-us' onClick={handleMenuClick} className="block lg:inline font-12-500 text-white hover:text-customSafron   lg:py-0">
+          CARRERS
+        </Link>
+        <span className='text-white px-2'>|</span>
 
-      {/* Hamburger Icon */}
-      <div className="lg:hidden" onClick={toggleMenu}>
-        {menuOpen ? (
-          <MdClose className="text-white text-2xl cursor-pointer" />
-        ) : (
-          <MdMenu className="text-white text-2xl cursor-pointer" />
-        )}
+        <Link to='/about-us' onClick={handleMenuClick} className="block  lg:inline font-12-500 text-white hover:text-customSafron  max-lg:mb-2  lg:py-0">
+          INSIGHTS
+        </Link>
+        <span className='text-white px-2'>|</span>
+        <Link to='/contact-us' onClick={handleMenuClick} className="block lg:inline font-12-500 text-white hover:text-customSafron   lg:py-0">
+          CONTACT
+        </Link>
       </div>
-
-      {/* Navigation Links */}
-      <div className={`${menuOpen ? 'block' : 'hidden'} absolute top-28 right-14 custom-480px:top-16 custom-480px:right-10  bg-customDarkblue  max-lg:rounded-lg max-lg:px-5 max-lg:py-2 lg:bg-transparent lg:static lg:flex lg:gap-8 lg:items-center`}
-      >
-        <Link to={'/'} onClick={handleMenuClick}  className="block lg:inline font-18-500 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
-          Home
+      <div className="flex flex-wrap  items-center justify-between pb-4  ">
+        {/* Logo Section */}
+        <Link to={'/'} className="flex gap-2 items-center w-max px-5 border-customSafron border-r-4">
+          <img src={logo} alt="TIC Logo" width={60} className='bg-white rounded-full' />
+          <p className="font-20-700 text-white">THE INSIGNIA CONSULTANT</p>
         </Link>
 
-        <Dropdown
+        {/* Hamburger Icon */}
+        <div className="lg:hidden" onClick={toggleMenu}>
+          {menuOpen ? (
+            <MdClose className="text-white text-2xl cursor-pointer" />
+          ) : (
+            <MdMenu className="text-white text-2xl cursor-pointer" />
+          )}
+        </div>
+
+        {/* Navigation Links */}
+        <div className={`${menuOpen ? 'block' : 'hidden'} absolute top-28 right-14 custom-480px:top-16 custom-480px:right-10  bg-customDarkblue  max-lg:rounded-lg max-lg:px-5 max-lg:py-2 lg:bg-transparent lg:static lg:flex lg:gap-8 lg:items-center`}
+        >
+          {/* <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-18-500 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+          Home
+        </Link> */}
+          <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-14-700 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+            SOCIAL
+          </Link>
+          <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-14-700 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+            PPC
+          </Link>
+          <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-14-700 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+            SEO
+          </Link>
+          <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-14-700 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+            STRATEGY
+          </Link>
+          <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-14-700 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+            Branding
+          </Link>
+          <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-14-700 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+            DESIGN + DEV
+          </Link>
+          <Link to={'/'} onClick={handleMenuClick} className="block lg:inline font-14-700 text-white  max-lg:my-2 lg:py-0 hover:text-customSafron">
+            WORK
+          </Link>
+
+          {/* <Dropdown
           menu={{
             items,
           }}
@@ -120,14 +157,14 @@ const Header = () => {
               <MdKeyboardArrowDown className='text-customSafron'/>
             </Space>
           </Typography.Link>
-        </Dropdown>
+        </Dropdown> */}
+        </div>
+          <div className='mt-3 '>
+            <Button lable='FREE CONSULTATION' className='py-3' />
 
-        <Link to='/about-us' onClick={handleMenuClick} className="block  lg:inline font-18-500 text-white hover:text-customSafron  max-lg:my-2  lg:py-0">
-          About Us
-        </Link>
-        <Link to='/contact-us' onClick={handleMenuClick}  className="block lg:inline font-18-500 text-white hover:text-customSafron   lg:py-0">
-          Contact Us
-        </Link>
+          </div>
+
+       
       </div>
     </div>
   );

@@ -81,10 +81,11 @@ const Banner = () => {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-customDarkblue bg-opacity-50"></div>
-        <div className="absolute top-1/3 left-[22%] ">
-          <div className="max-w-[650px]">
-            <p className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-1/4 after:h-[4px] after:bg-customSafron after:mt-2 "> Your Gateway to Sucess</p>
-            <p className="font-22-500 text-white mt-5 ">We have the power of marketing to transform businesses and propel them to new heights</p>
+        <div className="absolute top-1/3 left-[10%] md:left-[19%] ">
+          <div className="max-w-[800px]">
+            <h2 className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-1/4 after:h-[4px] after:bg-customSafron after:mt-2 "> Clever Ideas Captivating Results.</h2>
+            <h3 className="font-25-800 text-white mt-5 ">SEO, Digital & Performance Marketing Agency</h3>
+            <p className="font-22-500 text-white mt-5 ">Our Research First Approach generates great results for our Client</p>
           </div>
         </div>
       </div>

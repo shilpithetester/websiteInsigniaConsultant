@@ -5,13 +5,17 @@ const AboutUs = () => {
     return (
         <div className='mb-10' >
             <div className="relative mb-10">
-        <img src={aboutUs} alt="aboutUs-Img" className=" w-full h-[60vh] object-cover" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <p className="font-72-500 text-white">About Us</p>
+        <img src={aboutUs} alt="aboutUs-Img" className=" w-full h-[65vh] object-cover" />
+        <div className="absolute top-1/3 left-[10%] md:left-[19%]">
+          <div className="max-w-[650px]">
+            <h2 className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-44 after:h-[4px] after:bg-customSafron after:mt-2 ">About Us</h2>
+            {/* <h3 className="font-25-800 text-white mt-5 ">The key unlocking your market potential.</h3> */}
+                        <p className="font-22-500 text-white mt-5 ">We are a team of passionate marketing experts dedicated to helping businesses achieve their goals through innovative and strategic marketing solutions.</p>
+          </div>
         </div>
       </div>
             <div className='page-container'>
-                <p className='font-18-400 mb-6'>In a world where businesses are constantly seeking ways to stand out from the crowd, effective marketing is no longer a luxury but a necessity. At The Insignia Consultant, we understand the power of marketing to transform businesses and propel them to new heights. We are a team of passionate marketing experts dedicated to helping businesses achieve their goals through innovative and strategic marketing solutions.</p>
+                {/* <p className='font-18-400 mb-6'>In a world where businesses are constantly seeking ways to stand out from the crowd, effective marketing is no longer a luxury but a necessity. At The Insignia Consultant, we understand the power of marketing to transform businesses and propel them to new heights. We are a team of passionate marketing experts dedicated to helping businesses achieve their goals through innovative and strategic marketing solutions.</p> */}
 
                 <div >
                     <p className='font-24-700'> Our Passion for Marketing</p>

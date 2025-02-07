@@ -79,12 +79,18 @@
 .font-16-700{
   @apply font-montserrat text-sm md:text-base font-bold 
 }
+.font-14-700{
+  @apply font-montserrat text-sm font-bold 
+}
+.font-12-500{
+  @apply font-montserrat text-xs font-medium 
+}
 .font-12-400{
   @apply font-montserrat text-xs font-normal 
 }
 
 .page-container{
-  @apply w-4/5 md:w-3/5 m-auto
+  @apply w-4/5 md:w-[65%] m-auto
 }
 .google-container{
   @apply w-4/5 md:w-4/5 m-auto

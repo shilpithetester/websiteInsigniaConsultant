@@ -57,19 +57,20 @@
 // export default ContactUs
 
 import { useForm } from 'react-hook-form';
-import contactUs from '../assets/contactUs/contactus.jpg';
+import contactUs from '../assets/BannerImages/search_hero_bg.jpg'
 import backgroundImg from '../assets/BannerImages/search_hero_bg.jpg';
+import formBgImg from '../assets/AboutUs/Form-bg.jpg';
 import FormButton from '../components/FormButton';
 import { useState } from 'react';
 
 const ContactUs = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const { register: registerConsultancy, handleSubmit: handleSubmitConsultancy, formState: { errors: errorsConsultancy } } = useForm();
+    const { register: registerConsultancy, handleSubmit: handleSubmitConsultancy, formState: { errors: errorsConsultancy },reset:resetConsultancy } = useForm();
     const[loading,setLoading]=useState(false)
+    const[consultancyLoading,setConsultancyLoading]=useState(false)
     
 
     const onContactSubmit = async (data, e) => {
-        console.log(data, "data");
         setLoading(true)
         e.preventDefault();
         const formData = new FormData();
@@ -100,18 +101,54 @@ const ContactUs = () => {
 
 
 
-    const onConsultancySubmit = (data) => {
+    const onConsultancySubmit =async (data,e) => {
         console.log('Form Data:', data);
+        setConsultancyLoading(true)
+        e.preventDefault();
+        const formData = new FormData();
+        Object.entries(data).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+
+        try {
+            const response = await fetch(
+                "https://script.google.com/macros/s/AKfycbwMJul-Z3NlAZNrjWPQINcIBqBxyDWXRNN0hVasFKvNFNkfTdn2dTOxDQTUTfYeXZyH2w/exec",
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
+            if (response) {
+                resetConsultancy()
+                setConsultancyLoading(false)
+            }
+          
+            console.log(response?.body, 'response');
+
+            
+        } catch (error) {
+            console.error("Fetch error:", error);
+        }
     };
 
     return (
         <div>
-            <div>
-                <img src={contactUs} alt="contactUs-Img" className="w-full h-[60vh] object-cover" />
-            </div>
+            <div className="relative">
+                            <img src={contactUs} alt="contactUs" className=" w-full h-[65vh] object-cover" />
+                            <div className="absolute top-1/3 left-[10%] md:left-[19%] ">
+                                <div className="max-w-[650px]">
+                                    <h2 className="font-65-900 text-white  leading-tight after:content-[''] after:block after:w-44 after:h-[4px] after:bg-customSafron after:mt-2 ">Contact US</h2>
+                                    {/* <h3 className="font-25-800 text-white mt-5 ">The key unlocking your market potential.</h3> */}
+                                    {/* <p className="font-22-500 text-white mt-5 ">Branding is the process of making a product, organization, or person distinct from others by using a name, design, symbol, or set of qualities</p> */}
+                                </div>
+                            </div>
+                            {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <p className="font-72-500 text-white">Branding</p>
+                            </div> */}
+                        </div>
             <div
                 className="bg-cover bg-center bg-no-repeat p-8"
-                style={{ backgroundImage: `url(${backgroundImg})` }}
+                style={{ backgroundImage: `url(${formBgImg})` }}
             >
                 <div className='page-container'>
                     <h3 className='font-24-700 text-center my-5 text-white'>TIC Contact us</h3>
@@ -188,7 +225,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                         <div className='mt-8 w-max m-auto'>
-                            <FormButton lable='Contact Us'loading={loading} />
+                            <FormButton lable='Contact Us' loading={loading} classname='bg-customDarkblue'/>
                         </div>
                     </form>
                 </div>
@@ -301,7 +338,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                         <div className='mt-8 w-max m-auto'>
-                            <FormButton lable='Book Consultancy' />
+                            <FormButton lable='Book Consultancy' loading={consultancyLoading}/>
                         </div>
                     </form>
                 </div>
