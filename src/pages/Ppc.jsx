@@ -5,7 +5,7 @@ import logoVision from '../assets/logos/image 23.svg'
 import portfolioBrand from '../assets/logos/image 24.svg'
 import brandStratergy from '../assets/logos/image 25.svg'
 import ApproacheCard from '../components/ApproacheCard'
-import Cards from '../components/cards'
+import Cards from '../components/Cards'
 import ServicesSec from '../components/ServicesSec'
 import {lead,serp,budget,targeting,opportunity,algorithm,audit,research,ideate,build,monitor,test} from '../assets/PpcLogo/index'
 

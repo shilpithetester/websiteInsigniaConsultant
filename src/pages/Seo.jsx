@@ -5,7 +5,7 @@ import logoVision from '../assets/logos/image 23.svg'
 import portfolioBrand from '../assets/logos/image 24.svg'
 import brandStratergy from '../assets/logos/image 25.svg'
 import ApproacheCard from '../components/ApproacheCard'
-import Cards from '../components/cards'
+import Cards from '../components/Cards'
 import ServicesSec from '../components/ServicesSec'
 import { websiteTraffic, funnel, brandAuthority,leads,longterm,track,audit,research,creative ,technical, analytics,reporting} from '../assets/seoLogo/index'
 
